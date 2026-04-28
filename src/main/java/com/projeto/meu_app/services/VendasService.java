@@ -51,6 +51,15 @@ public class VendasService {
         return null;
 
     }
+
+    // Deletar venda por ID
+public boolean deletarVenda(Integer id) {
+    if (vendasRepository.existsById(id)) {
+        vendasRepository.deleteById(id);
+        return true; 
+    }
+    return false; 
+}
     
 
 
