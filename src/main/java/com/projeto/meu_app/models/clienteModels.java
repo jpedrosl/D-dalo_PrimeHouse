@@ -9,11 +9,10 @@ import jakarta.persistence.Table;
 
 @Table(name = "cliente")
 @Entity
-public class clienteModels {
+public class ClienteModels {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
     @Column(name = "id_cliente")
     private Integer id;
 
@@ -30,11 +29,11 @@ public class clienteModels {
     private String emailCliente;
 
     
-    public clienteModels() {
+    public ClienteModels() {
     }
 
 
-    public clienteModels(Integer id, String nomeCliente, String cpfCliente, String telefoneCliente,
+    public ClienteModels(Integer id, String nomeCliente, String cpfCliente, String telefoneCliente,
             String emailCliente) {
         this.id = id;
         this.nomeCliente = nomeCliente;

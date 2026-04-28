@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "imoveis")    
-public class imoveisModels {
+public class ImoveisModels {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,12 +29,12 @@ public class imoveisModels {
 
     @OneToMany
     @JoinColumn(name = "id_cliente")
-    private List<clienteModels> proprietario;
+    private List<ClienteModels> proprietario;
 
-    public imoveisModels() {
+    public ImoveisModels() {
     }
 
-    public imoveisModels(Integer id, Double valorImovel, String bairroImovel, List<clienteModels> proprietario) {
+    public ImoveisModels(Integer id, Double valorImovel, String bairroImovel, List<ClienteModels> proprietario) {
         this.id = id;
         this.valorImovel = valorImovel;
         this.bairroImovel = bairroImovel;
@@ -65,10 +65,10 @@ public class imoveisModels {
     }
 
 
-    public List<clienteModels> getProprietario() {
+    public List<ClienteModels> getProprietario() {
         return proprietario;
     }
-    public void setProprietario(List<clienteModels> proprietario) {
+    public void setProprietario(List<ClienteModels> proprietario) {
         this.proprietario = proprietario;
     }
 
